@@ -34,6 +34,7 @@ int main(int argc, char *argv[])
 	}
 	while (readline > 0)
 	{
+		con = NULL;
 		readline = getline(&con, &size, file);
 		bus.content = con;
 		count++;
