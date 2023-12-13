@@ -66,5 +66,6 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
 void f_pint(stack_t **head, unsigned int counter);
 void f_pop(stack_t **head, unsigned int counter);
 
+void f_swap(stack_t **head, unsigned int counter);
 
 #endif
