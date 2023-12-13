@@ -63,7 +63,6 @@ void f_add(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);
 void addnode(stack_t **head, int n);
 int execute(char *content, stack_t **stack, unsigned int counter, FILE *file);
-
-
+void f_pint(stack_t **head, unsigned int counter);
 
 #endif
