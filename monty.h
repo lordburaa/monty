@@ -6,10 +6,6 @@
 #include <stdlib.h>
 #define _GNU_SOURCE
 
-
-
-
-
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -69,4 +65,12 @@ void f_pop(stack_t **head, unsigned int counter);
 void f_swap(stack_t **head, unsigned int counter);
 void f_nop(stack_t **head, unsigned int counter);
 void free_stack(stack_t *head);
+
+void f_subb(stack_t **head, unsigned int len_number);
+void f_pchar(stack_t **head, unsigned int len_number);
+
+void addqueue(stack_t **head, int n);
+void f_queue(stack_t **head, unsigned int counter);
+void f_stack(stack_t **head, unsigned int counter);
+
 #endif
