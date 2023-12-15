@@ -17,7 +17,7 @@ void f_queuse(stack_t **head, unsigned int counter)
  * @head: head of teh stack
  * Return: no return
  */
-/*void addqueue(stack_t **head, int n)
+void addqueue(stack_t **head, int n)
 {
 	stack_t *new_node, *aux;
 	
@@ -37,11 +37,11 @@ void f_queuse(stack_t **head, unsigned int counter)
 	if (!aux)
 	{
 		*head = new_node;
-		new-node->prev = NULL;
+		new_node->prev = NULL;
 	}
 	else
 	{
 		aux->next = new_node;
 		new_node->prev = aux;
 	}
-}*/
+}
