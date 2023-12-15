@@ -17,6 +17,11 @@ void f_pop(stack_t **head, unsigned int counter)
 		free(bus.content);
 */		exit(EXIT_FAILURE);
 	}
+	if((*head)->next == NULL)
+	{
+		free(head);
+		return;
+	}
 	h = *head;
 	h = h->next;
 	h->prev = NULL;
