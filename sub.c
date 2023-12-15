@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void f_subb(stack_t **head, unsigned int len_number)
+void f_sub(stack_t **head, unsigned int len_number)
 {
 	stack_t *temp;
 	temp = *head;
