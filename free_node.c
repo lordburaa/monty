@@ -8,6 +8,8 @@ void free_stack(stack_t *head)
 	stack_t *new;
 
 	new = head;
+
+
 	while (head)
 	{
 
