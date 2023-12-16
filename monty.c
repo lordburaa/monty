@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
 		}
 		if (check)
 		{
-			while (up_size < check)
+			while (up_size <= check)
 			{
 				printf("%d\n", pall_buf[up_size]);
 				up_size++;
