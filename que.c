@@ -5,7 +5,7 @@
  * @counter: line number
  * Return: no retrun
  */
-void f_queuse(stack_t **head, unsigned int counter)
+void f_queue(stack_t **head, unsigned int counter)
 {
 	(void)head;
 	(void)counter;

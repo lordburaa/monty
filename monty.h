@@ -21,7 +21,7 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
-
+extern int pall_buf[1023];
 
 /**
  * struct instruction_s - opcode and its function
@@ -52,8 +52,8 @@ typedef struct bus_s
 	int lifi;
 } bus_t;
 extern bus_t bus;
-
-/********************** FILE **********************/
+extern int check;
+/********************* FILE **********************/
 void f_pall(stack_t **head, unsigned int counter);
 void f_add(stack_t **head, unsigned int counter);
 void f_push(stack_t **head, unsigned int counter);

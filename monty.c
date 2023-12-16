@@ -3,6 +3,8 @@
 
 
 bus_t bus = {NULL, NULL, NULL, 0};
+int check = 0;
+int pall_buf[1023];
 
 /**
  * main - monty interpreter
@@ -18,6 +20,7 @@ int main(int argc, char *argv[])
 	unsigned int count = 0;
 	size_t size = 0;
 	stack_t *stack = NULL;
+	int up_size;
 
 
 	if (argc != 2)
@@ -34,6 +37,8 @@ int main(int argc, char *argv[])
 	bus.file = file;
 	while (readline > 0)
 	{
+		check = 0;
+		up_size = 0;
 		con = NULL;
 		readline = getline(&con, &size, file);
 		bus.content = con;
@@ -41,6 +46,14 @@ int main(int argc, char *argv[])
 		if (readline > 0)
 		{
 			execute(con, &stack, count, file);
+		}
+		if (check)
+		{
+			while (up_size < check)
+			{
+				printf("%d\n", pall_buf[up_size]);
+				up_size++;
+			}
 		}
 	}
 	free_stack(stack);
