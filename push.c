@@ -17,7 +17,11 @@ void f_push(stack_t **head, unsigned int counter)
 		for (; bus.arg[j] != '\0'; j++)
 		{
 			if (bus.arg[j] > 57 || bus.arg[j] < 48)
+			{
 				flag = 1;
+				break;
+			}
+			
 		}
 		if (flag == 1)
 		{
