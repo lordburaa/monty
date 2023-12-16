@@ -27,5 +27,7 @@ void f_pop(stack_t **head, unsigned int counter)
 	h->prev = NULL;
 
 	*head = h;
-	free(temp);
+
+  	free(temp);
+ 
 }
