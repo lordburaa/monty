@@ -26,9 +26,7 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 	char *op;
 
 	op = strtok(content, " \n\t");
-	if (op != NULL)
-	{
-		if (op && op[0] == '#')
+	if (op && op[0] == '#')
 		return (0);
 	bus.arg = strtok(NULL, " \n\t");
 	while (opst[i].opcode && op)
@@ -40,10 +38,9 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		}
 		i++;
 	}
-	}
 
-	else
-	{ if (op && opst[i].opcode == NULL)
+	
+	if (op && opst[i].opcode == NULL)
 	{
 		fprintf(stderr, "L%d: unknown instruction %s\n", counter, op);
 		fclose(file);
@@ -51,6 +48,6 @@ int execute(char *content, stack_t **stack, unsigned int counter, FILE *file)
 		free_stack(*stack);
 		exit(EXIT_FAILURE);
 	}
-	}
+	
 	return (1);
 }
